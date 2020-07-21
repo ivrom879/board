@@ -23,3 +23,6 @@ Route::get('/about', function () {
 
 Route::get('/advertisements', 'AdvertisementController@index')
     ->name('advertisements.index');
+
+Route::get('/advertisements/{id}', 'AdvertisementController@show')
+    ->name('advertisement.show');

@@ -12,4 +12,10 @@ class AdvertisementController extends Controller
         $advertisements = Advertisement::paginate();
         return view('advertisement.index', compact('advertisements'));
     }
+
+    public function show($id)
+    {
+        $advertisement = Advertisement::findOrFail($id);
+        return view('advertisement.show', compact('advertisement'));
+    }
 }
