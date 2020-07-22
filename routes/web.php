@@ -26,3 +26,9 @@ Route::get('/advertisements', 'AdvertisementController@index')
 
 Route::get('/advertisements/{id}', 'AdvertisementController@show')
     ->name('advertisement.show');
+
+Route::get('/advertisements/create', 'AdvertisementController@create')
+    ->name('advertisements.create');
+
+Route::post('/advertisements', 'AdvertisementController@store')
+    ->name('advertisements.store');
